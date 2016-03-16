@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap-sprockets";
-@import "bootstrap";
+@import "bootstrap"; 
 
 $red: #cc0000;
 $back: #e68a00;
@@ -30,6 +30,10 @@ html {
 	border: 0px;
 	border-radius: 0px;
 	box-shadow: 2px 2px 4px ;
+}
+
+.front {
+	margin-bottom: 40px;
 }
 
 
