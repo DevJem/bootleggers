@@ -4,6 +4,109 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-h1 {
-	color: $gray-light;
+$red: #cc0000;
+$back: #e68a00;
+
+@font-face {
+	font-family: 'nashville';
+	src: url('fonts/NASHVILL.TTF');
+	font-weight: normal;
+	font-style: normal;
 }
+
+html {
+	overflow-y: scroll;
+}
+
+
+.icon {
+	margin: 22px auto 0 auto;
+	width: 700px;
+}
+
+.navbar {
+	background: $back;
+	height: 320px;
+	border: 0px;
+	border-radius: 0px;
+	box-shadow: 2px 2px 4px ;
+}
+
+
+#contact {
+	margin-top: 20px;
+	font-width: 2em;
+	font-size: 25px;
+	font-family: 'nashville';
+	font-weight: bold;
+	// clear: both;
+	color: black;
+	// margin-top: 100px;
+	// position: absolute;
+	// right: 150px;
+
+	a {
+		position: absolute;
+		right: 50px;
+		text-decoration: none;
+		text-align: center;
+		color: black;
+		&:hover {
+			text-decoration: none;
+		}
+		&:link {
+			text-decoration: none;
+		}
+		&:visited {
+			text-decoration: none;
+		}
+	}
+
+	p {
+		font-family: nashville;
+		position: absolute;
+		right: 50px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 768px) {
+	.icon {
+		width: 400px;
+		margin: auto;
+		margin-top: 45px;
+	}
+
+	.navbar {
+		height: 250px;
+	}
+
+	#front_img {
+		width: 400px;
+		margin: auto;
+	}
+
+	.front {
+		box-shadow: -3px 3px 6px;
+
+	}
+
+
+
+	#contact {
+		p {
+			position: relative;
+			text-align: center;
+			right: 0;
+			margin: auto;
+		}
+
+		a {
+			position: relative;
+			margin: auto;
+			right: 0;
+			text-align: center;
+		}
+	}
+}
+
