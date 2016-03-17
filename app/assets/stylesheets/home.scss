@@ -9,8 +9,8 @@ $back: #e68a00;
 
 @font-face {
 	font-family: 'nashville';
-	src: url('/fonts/nashvill.ttf');
-	src: local('nashville'), local('nashville'), url('/fonts/nashvill.ttf') format('truetype');
+	src: asset-url('/fonts/nashvill.ttf');
+	// src: local('nashville'), local('nashville'), url('app/assets/fonts/nashvill.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -27,7 +27,7 @@ html {
 
 .navbar {
 	background: $back;
-	height: 320px;
+	height: 300px;
 	border: 0px;
 	border-radius: 0px;
 	box-shadow: 2px 2px 4px ;
@@ -39,8 +39,8 @@ html {
 }
 
 #map {
-	float: left;
-	width: 100%;
+	// float: left;
+	width: 50%;
 	margin: auto;
 	margin-bottom: 20px;
 }
@@ -72,21 +72,45 @@ html {
 	}
 }
 
+#ipad_fix {
+	display: none;
+}
+
 #fb {
 	margin-top: 30px;
+	margin-bottom: 40px;
 	position: absolute;
 	right: 100px;
 }
 
+#gallery {
+	div {
+		width: 50%;
+	}
+	padding: 15px;
+}
 
 
-/*
- *	Media Queries
- *
- *
- *
- *
- */
+
+/*									*
+ *	Media Queries 	*
+ *									*
+ *									*
+ *									*
+ *									*
+ *									*/
+
+@media (max-width: 991px) {
+	#map {
+		width: 100%;
+	}
+
+	#contact {
+		font-size: 12px;
+	}
+
+}
+
 
 @media (max-width: 768px) {
 	.icon {
@@ -100,13 +124,22 @@ html {
 	}
 
 	#front_img {
-		width: 400px;
-		margin: auto;
+ 		display: none;
 	}
 
 	.front {
 		box-shadow: -3px 3px 6px;
 
+	}
+
+	#map {
+		width: 70%;
+		margin: auto;
+	}
+
+	#contact {
+		font-size: 14px;
+		margin: auto;
 	}
 
 
@@ -125,6 +158,12 @@ html {
 			right: 0;
 			text-align: center;
 		}
+	}
+
+	#ipad_fix {
+		display: block;
+		width: 40%;
+		margin: auto;
 	}
 }
 
@@ -149,5 +188,14 @@ html {
 		margin-top: 30px;
 		position: absolute;
 		right: 10px;
+	}
+
+	#map {
+		width: 100%;
+		margin: 10px auto 20px;
+	}
+
+	#contact {
+		margin-bottom: 10px;
 	}
 }
