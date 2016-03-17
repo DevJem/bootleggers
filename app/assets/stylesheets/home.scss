@@ -9,7 +9,8 @@ $back: #e68a00;
 
 @font-face {
 	font-family: 'nashville';
-	src: url('fonts/NASHVILL.TTF');
+	src: url('/fonts/nashvill.ttf');
+	src: local('nashville'), local('nashville'), url('/fonts/nashvill.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -33,25 +34,24 @@ html {
 }
 
 .front {
+	box-shadow: -3px 3px 6px;
 	margin-bottom: 40px;
 }
 
+#map {
+	float: left;
+	width: 100%;
+	margin: auto;
+	margin-bottom: 20px;
+}
 
 #contact {
 	margin-top: 20px;
 	font-width: 2em;
-	font-size: 25px;
-	font-family: 'nashville';
-	font-weight: bold;
-	// clear: both;
+	font-size: 20px;
+	clear: left;
 	color: black;
-	// margin-top: 100px;
-	// position: absolute;
-	// right: 150px;
-
 	a {
-		position: absolute;
-		right: 50px;
 		text-decoration: none;
 		text-align: center;
 		color: black;
@@ -67,12 +67,26 @@ html {
 	}
 
 	p {
-		font-family: nashville;
-		position: absolute;
-		right: 50px;
+		font-family: nashville, sans-serif;
 		text-align: center;
 	}
 }
+
+#fb {
+	margin-top: 30px;
+	position: absolute;
+	right: 100px;
+}
+
+
+
+/*
+ *	Media Queries
+ *
+ *
+ *
+ *
+ */
 
 @media (max-width: 768px) {
 	.icon {
@@ -114,3 +128,26 @@ html {
 	}
 }
 
+/* Extra Small */
+
+@media (max-width: 425px) {
+	.icon {
+		width: 250px;
+		margin-top: 20px;
+	}
+
+	.navbar {
+		height: 128px;
+	}
+
+	#front_img {
+		width: 100%;
+		clear: right;
+	}
+
+	#fb {
+		margin-top: 30px;
+		position: absolute;
+		right: 10px;
+	}
+}

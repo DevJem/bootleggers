@@ -8,20 +8,23 @@
 	</div>
 </header>
 <div class="container">
-	<div id="front_img" class="col-lg-5 col-md-6 col-sm-6 ">
+	<div id="front_img" class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
 		<%= image_tag "/front.jpg", class: "front", width: "100%" %>
 	</div>
+	<div class="col-lg-7 col-md-6 col-sm-5 col-xs-12">
 
-	<div id="contact" class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
-			<!-- <%= render 'layouts/header' %> -->
-		<p>810 MCMINNVILLE HWY,<br/>
-			WOODBURY, TN 37190<br/>
-			<a href="tel:615-563-5555">
-				  <span>615-563-5555</span></a><br/>
-			Open 8AM - 11PM<br/>Monday through Saturday
-		</p>
+		<div id="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.011342143601!2d-86.05667928455965!3d35.824197429724975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88614d0ede78763f%3A0x9c219aff63118f9c!2sBootlegger&#39;s+Liquor!5e0!3m2!1sen!2sus!4v1458191718206" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+
+		<div id="contact" >
+			<p>810 MCMINNVILLE HWY,<br/>
+				WOODBURY, TN 37190<br/>
+				<a href="tel:615-563-5555">
+					  <span>615-563-5555</span></a><br/>
+				Open 8AM - 11PM<br/>Monday through Saturday
+			</p>
+		</div>
+		
 	</div>
 </div>
-
-<footer>
-</footer>
