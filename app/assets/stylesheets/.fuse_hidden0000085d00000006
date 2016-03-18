@@ -1,0 +1,199 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap"; 
+
+$red: #cc0000;
+$back: #e68a00;
+
+@font-face {
+	font-family: 'nashville';
+	src: asset-url('/fonts/nashvill.ttf');
+	// src: local('nashville'), local('nashville'), url('app/assets/fonts/nashvill.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+
+.icon {
+	margin: 22px auto 0 auto;
+	width: 700px;
+}
+
+.navbar {
+	background: $back;
+	height: 300px;
+	border: 0px;
+	border-radius: 0px;
+	box-shadow: 2px 2px 4px ;
+}
+
+.front {
+	box-shadow: -3px 3px 6px;
+	margin-bottom: 25px;
+	clear: both;
+}
+
+#map {
+	// float: left;
+	width: 70%;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+#contact {
+	margin-top: 20px;
+	font-width: 2em;
+	font-size: 20px;
+	clear: left;
+	color: black;
+	a {
+		text-decoration: none;
+		text-align: center;
+		color: black;
+		&:hover {
+			text-decoration: none;
+		}
+		&:link {
+			text-decoration: none;
+		}
+		&:visited {
+			text-decoration: none;
+		}
+	}
+
+	p {
+		font-family: nashville, sans-serif;
+		text-align: center;
+	}
+}
+
+#ipad_fix {
+	display: none;
+}
+
+#fb {
+	margin-top: 30px;
+	margin-bottom: 40px;
+	position: absolute;
+	right: 100px;
+}
+
+#gallery {
+	box-sizing: border-box;
+
+	div {
+		margin: auto;
+	}
+	padding: 15px;
+}
+
+
+
+/*									*
+ *	Media Queries 	*
+ *									*
+ *									*
+ *									*
+ *									*
+ *									*/
+
+@media (max-width: 991px) {
+	#map {
+		width: 100%;
+	}
+
+	#contact {
+		font-size: 12px;
+	}
+
+}
+
+
+@media (max-width: 768px) {
+	.icon {
+		width: 400px;
+		margin: auto;
+		margin-top: 40px;
+	}
+
+	.navbar {
+		height: 225px;
+	}
+
+	#front_img {
+ 		display: none;
+	}
+
+	.front {
+		box-shadow: -3px 3px 6px;
+
+	}
+
+	#map {
+		width: 70%;
+		margin: auto;
+	}
+
+	#contact {
+		font-size: 14px;
+		margin: auto;
+		p {
+			position: relative;
+			text-align: center;
+			right: 0;
+			margin: auto;
+		}
+
+		a {
+			position: relative;
+			margin: auto;
+			right: 0;
+			text-align: center;
+		}
+	}
+
+	#ipad_fix {
+		display: block;
+		width: 40%;
+		margin: auto;
+	}
+}
+
+/* Extra Small */
+
+@media (max-width: 425px) {
+	.icon {
+		width: 250px;
+		margin-top: 20px;
+	}
+
+	.navbar {
+		height: 128px;
+	}
+
+	#front_img {
+		width: 100%;
+		clear: right;
+	}
+
+	#fb {
+		margin-top: 30px;
+		position: absolute;
+		right: 10px;
+	}
+
+	#map {
+		width: 100%;
+		margin: 10px auto 20px;
+	}
+
+	#contact {
+		margin-bottom: 10px;
+	}
+}
