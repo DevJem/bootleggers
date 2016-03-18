@@ -35,7 +35,8 @@ html {
 
 .front {
 	box-shadow: -3px 3px 6px;
-	margin-bottom: 40px;
+	margin-bottom: 25px;
+	clear: both;
 }
 
 #map {
@@ -84,8 +85,10 @@ html {
 }
 
 #gallery {
+	box-sizing: border-box;
+
 	div {
-		width: 50%;
+		margin: auto;
 	}
 	padding: 15px;
 }
@@ -116,11 +119,11 @@ html {
 	.icon {
 		width: 400px;
 		margin: auto;
-		margin-top: 45px;
+		margin-top: 40px;
 	}
 
 	.navbar {
-		height: 250px;
+		height: 225px;
 	}
 
 	#front_img {
@@ -140,11 +143,6 @@ html {
 	#contact {
 		font-size: 14px;
 		margin: auto;
-	}
-
-
-
-	#contact {
 		p {
 			position: relative;
 			text-align: center;
