@@ -46,6 +46,7 @@ $back: #e68a00;
 }
 #front_img {
 	float: left;
+	margin-bottom: 40px;
 	// box-sizing: border-box;
 }
 
@@ -87,7 +88,7 @@ $back: #e68a00;
 	padding-left: 15px;
 }
 
-#center {
+#center, #bio {
 	border: 1px solid black;
 	border-top: 0;
 	border-bottom: 0;
@@ -107,27 +108,26 @@ $back: #e68a00;
 	margin-top: 10px;
 	margin-bottom: 40px;
 	float: left;
-	text-align: center;
-}
-
-#fb-like-button {
-	display: none;
 }
 
 #fb-long {
+	margin: auto;
 	margin-top: 8px;
+	width: 100%;
 }
 
-
-
-#gallery {
-	box-sizing: border-box;
-
-	div {
-		margin: auto;
-	}
-	padding: 15px;
+#fbsmall {
+	display: none;
 }
+
+#fblarge {
+	display: inline;
+}
+
+#leftad, #centerad, #bannerad, #bio {
+	display: none;
+}
+
 
 
 
@@ -139,12 +139,7 @@ $back: #e68a00;
  *									*
  *									*/
 
-@media (min-width: 1400px) and (max-width: 1508px) {
-	.front {
-		width: 60%;
-		margin: auto;
-	}
-}
+
 
 
 @media (min-width: 1400px) {
@@ -155,12 +150,21 @@ $back: #e68a00;
 	#thomas {
 		font-size: 28px;
 	}
+
+	#leftad {
+		display: block;
+	}
+}
+
+@media (min-width: 1400px) and (max-width: 1508px) {
+	.front {
+		width: 45%;
+		// margin: auto;
+	}
 }
 
 @media (max-width: 1400px) {
-	.goaway {
-		display: none;
-	}
+
 
 	.front {
 		width: 80%;
@@ -173,6 +177,14 @@ $back: #e68a00;
 
 	#center {
 		margin-top: 10px;
+	}
+
+	.goaway {
+		display: none;
+	}
+
+	#centerad {
+		display: block;
 	}
 }
 
@@ -193,56 +205,85 @@ $back: #e68a00;
 		font-size: 20px;
 	}
 
-	.goaway {
-		visibility: hidden;
+	#fblarge {
+		display: none;
 	}
 
-	#fb-like-button {
-		display: none;
+	#fbsmall {
+		display: inline;
+		width: 100%;
+		margin: auto;
+		text-align: center;
 	}
-	.fb-like {
-		display: none;
+
+	.col-xs-12.fb-like {
+		padding: 0px;
+		margin: auto;
 	}
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.icon {
 		width: 400px;
 		margin: auto;
 		margin-top: 40px;
+	}
+	.goaway {
+		display: none;
 	}
 
 	.navbar {
 		height: 225px;
 	}
 
-	#front_img {
+	#front_img, #center {
  		display: none;
+	}
+
+	#bio {
+		display: block;
+	}
+
+	.col-xs-6 {
+		padding: 0px;
 	}
 
 	.pic {
 		box-sizing: border-box;
 		box-shadow: -3px 3px 6px;
-		clear: left;
-		width: 50%;
-		padding: 0;
-		margin: 5px;
-		margin-top: 9px;
+		width: 95%;
+		padding: 0px;
+		margin-bottom: 5px;
 	}
+
+	#centerad {
+		display: none;
+	}
+
+	#bannerad {
+		display: block;
+		text-align: center;
+	}
+  
+  #bannerad > * {
+		margin: auto;
+  }	
 
 	#map {
 		width: 100%;
+		height: 150px;
 		margin: auto;
 	}
 
-	#center {
-		border-left: 0;
+	#center, #bio {
+		border: 0;
 	}
 
 	#contact {
 		font-size: 2.5vw;
 		margin: auto;
+
 		p {
 			position: relative;
 			text-align: center;
@@ -258,15 +299,11 @@ $back: #e68a00;
 		}
 	}
 
+
 	#ipad_fix {
 		display: block;
 		width: 40%;
 		margin: auto;
-	}
-
-	#gallery div{
-		margin: auto;
-		margin-bottom: 10px;
 	}
 }
 
@@ -282,15 +319,17 @@ $back: #e68a00;
 		height: 128px;
 	}
 
+	#bio {
+		font-size: 4vw;
+	}
+
 	#front_img {
 		width: 100%;
 		clear: right;
 	}
 
 	#fb {
-		margin-top: 30px;
-		position: absolute;
-		right: 10px;
+		margin: 10px 0 5px 0;
 	}
 
 	#map {
@@ -304,9 +343,12 @@ $back: #e68a00;
 			font-size: 4vw;
 		}
 
-		p{
+		p {
 			font-size: 2.5vw;
 		}
 	}
 
+	.col-xs-6 {
+		padding: 0px;
+	}
 }
