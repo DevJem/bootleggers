@@ -114,6 +114,7 @@ $back: #e68a00;
 	margin: auto;
 	margin-top: 8px;
 	width: 100%;
+	text-align: center;
 }
 
 #fbsmall {
@@ -122,6 +123,9 @@ $back: #e68a00;
 
 #fblarge {
 	display: inline;
+	width: 100%;
+	margin: auto;
+	text-align: center;
 }
 
 #leftad, #centerad, #bannerad, #bio {
